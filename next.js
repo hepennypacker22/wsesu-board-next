@@ -32,6 +32,6 @@
         ? link(m.agendaUrl, 'Agenda', 'btn') + link(m.folderUrl, 'Full packet') + (d && d.meetUrl ? link(d.meetUrl, 'Join online') : '')
         : `<span class="muted">Agenda not posted yet</span>${link(m.folderUrl, 'Meeting folder')}`}</div>`;
   } catch (err) {
-    el.innerHTML = '<div class="eyebrow">Next meeting</div><div class="when">See School Boards Meetings on this page</div>';
+    el.innerHTML = '<div class="eyebrow">Next meeting</div><div class="when">See Upcoming Meetings on this page</div>';
   }
 })();
