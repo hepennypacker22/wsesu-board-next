@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T18:29:12.238Z",
+  "updated": "2026-10-30T18:58:32.875Z",
   "boards": {
     "wsesu": {
       "allUrl": "https://drive.google.com/drive/folders/1dJq4eCztlJAaDPrj7cxAwZrdbaNZoEEn",
@@ -37,7 +37,12 @@
           "date": "2026-11-03",
           "label": "Meeting",
           "folderUrl": "https://drive.google.com/drive/folders/1i_lhZ9nU2Jn51kkLLeeu8e-uHTXinXQ4",
-          "agendaUrl": "https://drive.google.com/file/d/1kM_5hHEhIn6RzqNbaT1HUL-fWiEHwjAO/view?usp=drive_web"
+          "agendaUrl": "https://drive.google.com/file/d/1kM_5hHEhIn6RzqNbaT1HUL-fWiEHwjAO/view?usp=drive_web",
+          "details": {
+            "time": "6:00 pm",
+            "place": "Hartland Elementary School (97 Martinsville Rd, Hartland) and Google Meet",
+            "meetUrl": "https://meet.google.com/mvf-nrpr-xww"
+          }
         },
         {
           "date": "2026-12-01",
@@ -66,13 +71,23 @@
           "date": "2026-11-02",
           "label": "Meeting at Windsor School",
           "folderUrl": "https://drive.google.com/drive/folders/1WKcW7W5KeqwHTQWJNP-GMhGyt9p0hQyN",
-          "agendaUrl": "https://drive.google.com/file/d/15lDaIAPJ_BwhtsPv707EI8-uuc6IsxqO/view?usp=drive_web"
+          "agendaUrl": "https://drive.google.com/file/d/15lDaIAPJ_BwhtsPv707EI8-uuc6IsxqO/view?usp=drive_web",
+          "details": {
+            "time": "6:30 p.m.",
+            "place": "Google Meet and Windsor School",
+            "meetUrl": "https://meet.google.com/ajx-dqan-xxs"
+          }
         },
         {
           "date": "2026-11-12",
           "label": "Budget Advisory Committee Meeting",
           "folderUrl": "https://drive.google.com/drive/folders/1hxOLq3m8Wy8IAemcUbEoSDRkLTq9NghX",
-          "agendaUrl": "https://drive.google.com/file/d/1UpHjtNg0I5c7CVycXpXxvSc4bwmat6hJ/view?usp=drive_web"
+          "agendaUrl": "https://drive.google.com/file/d/1UpHjtNg0I5c7CVycXpXxvSc4bwmat6hJ/view?usp=drive_web",
+          "details": {
+            "time": "10:00 a.m.",
+            "place": "Google Meet ONLY",
+            "meetUrl": "https://meet.google.com/scz-mqjp-oct"
+          }
         },
         {
           "date": "2026-12-07",

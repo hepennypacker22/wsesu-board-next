@@ -17,6 +17,8 @@ embed's inline style needs `position:static`.
   The Action in `.github/workflows/sync.yml` runs it every 30 minutes and commits changes.
 - Clerks keep one subfolder per meeting named `YYYY-MM-DD ...`. The agenda is a file in it with
   "Agenda" in the name and no "DRAFT".
+- Time, place and Google Meet link come only from the posted agenda PDF (`pdftotext`), and only when
+  the Date printed on it matches the folder date. Before an agenda is posted, none are shown.
 - `next.js` shows the first meeting dated today or later (Vermont time), so the strip moves on the
   morning after a meeting without waiting for a sync.
 - A cancelled or moved meeting: rename or delete its folder.

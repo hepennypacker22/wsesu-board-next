@@ -18,12 +18,18 @@
       el.innerHTML = `<div class="eyebrow">Next meeting</div><div class="when">Not scheduled yet</div><div class="links">${link(b.allUrl, 'All agendas & minutes')}</div>`;
       return;
     }
-    const label = m.label && m.label !== 'Meeting' ? ` <span class="muted">· ${esc(m.label)}</span>` : '';
+    // Time, place and Meet link are exactly as printed on the posted agenda (see agendaDetails); before
+    // an agenda is posted only the folder's label shows. "Meeting at X" from a folder name is dropped
+    // once the agenda's own Place is known.
+    const d = m.details;
+    const showLabel = m.label && !/^Meeting( at .*)?$/i.test(m.label) ? m.label : !d && m.label !== 'Meeting' ? m.label : '';
+    const extra = [d ? d.time : '', showLabel].filter(Boolean).map(esc).join(' · ');
     el.innerHTML =
       `<div class="eyebrow">${m.date === today ? 'Meeting today' : 'Next meeting'}</div>` +
-      `<div class="when"><strong>${esc(longDate(m.date))}</strong>${label}</div>` +
+      `<div class="when"><strong>${esc(longDate(m.date))}</strong>${extra ? ` <span class="muted">· ${extra}</span>` : ''}</div>` +
+      (d ? `<div class="place">${esc(d.place)}</div>` : '') +
       `<div class="links">${m.agendaUrl
-        ? link(m.agendaUrl, 'Agenda', 'btn') + link(m.folderUrl, 'Full packet')
+        ? link(m.agendaUrl, 'Agenda', 'btn') + link(m.folderUrl, 'Full packet') + (d && d.meetUrl ? link(d.meetUrl, 'Join online') : '')
         : `<span class="muted">Agenda not posted yet</span>${link(m.folderUrl, 'Meeting folder')}`}</div>`;
   } catch (err) {
     el.innerHTML = '<div class="eyebrow">Next meeting</div><div class="when">See School Boards Meetings on this page</div>';

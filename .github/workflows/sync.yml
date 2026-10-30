@@ -21,6 +21,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Install pdftotext
+        run: sudo apt-get install -y -qq poppler-utils >/dev/null
       - name: Read the boards' Drive meeting folders
         id: fetch
         # A Drive hiccup leaves the last good data in place; the failure is re-raised after the commit.
