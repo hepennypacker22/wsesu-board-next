@@ -1,0 +1,121 @@
+{
+  "updated": "2026-10-30T18:29:12.238Z",
+  "boards": {
+    "wsesu": {
+      "allUrl": "https://drive.google.com/drive/folders/1dJq4eCztlJAaDPrj7cxAwZrdbaNZoEEn",
+      "meetings": [
+        {
+          "date": "2026-11-23",
+          "label": "Meeting",
+          "folderUrl": "https://drive.google.com/drive/folders/19eYtDUD_o7D2pm18g1YeYpBf95uqPB4D",
+          "agendaUrl": ""
+        },
+        {
+          "date": "2026-12-14",
+          "label": "Meeting",
+          "folderUrl": "https://drive.google.com/drive/folders/1k25JxZPyAbGUeurl-PR2et1yHWURnMP_",
+          "agendaUrl": ""
+        },
+        {
+          "date": "2027-01-25",
+          "label": "Meeting",
+          "folderUrl": "https://drive.google.com/drive/folders/1343pCUo_4_djTsNM9MI3K7Zvvr77mzo2",
+          "agendaUrl": ""
+        },
+        {
+          "date": "2027-02-15",
+          "label": "Meeting",
+          "folderUrl": "https://drive.google.com/drive/folders/1kNiKNjNqNTRnQcM6eNixgVpKfkIrs9Mu",
+          "agendaUrl": ""
+        }
+      ]
+    },
+    "hartland": {
+      "allUrl": "https://drive.google.com/drive/folders/1fODyUf3poSDOD80mh6FbR-_TxpDsMKCJ",
+      "meetings": [
+        {
+          "date": "2026-11-03",
+          "label": "Meeting",
+          "folderUrl": "https://drive.google.com/drive/folders/1i_lhZ9nU2Jn51kkLLeeu8e-uHTXinXQ4",
+          "agendaUrl": "https://drive.google.com/file/d/1kM_5hHEhIn6RzqNbaT1HUL-fWiEHwjAO/view?usp=drive_web"
+        },
+        {
+          "date": "2026-12-01",
+          "label": "Meeting",
+          "folderUrl": "https://drive.google.com/drive/folders/1RdjkwY94zIqWSEZt2F3DFfrOSqnZ30fS",
+          "agendaUrl": ""
+        },
+        {
+          "date": "2027-02-02",
+          "label": "Meeting",
+          "folderUrl": "https://drive.google.com/drive/folders/1MuyEqV1kyOqUERsZezEj9pH68G-beuS5",
+          "agendaUrl": ""
+        },
+        {
+          "date": "2027-03-16",
+          "label": "Reorganization Meeting",
+          "folderUrl": "https://drive.google.com/drive/folders/1syj28N4E0qizVc1Hb50n3U-8KxXmSzpa",
+          "agendaUrl": ""
+        }
+      ]
+    },
+    "mount-ascutney": {
+      "allUrl": "https://drive.google.com/drive/folders/1dDNGUGvJ406_huug0WaYWuCHuGtObVhq",
+      "meetings": [
+        {
+          "date": "2026-11-02",
+          "label": "Meeting at Windsor School",
+          "folderUrl": "https://drive.google.com/drive/folders/1WKcW7W5KeqwHTQWJNP-GMhGyt9p0hQyN",
+          "agendaUrl": "https://drive.google.com/file/d/15lDaIAPJ_BwhtsPv707EI8-uuc6IsxqO/view?usp=drive_web"
+        },
+        {
+          "date": "2026-11-12",
+          "label": "Budget Advisory Committee Meeting",
+          "folderUrl": "https://drive.google.com/drive/folders/1hxOLq3m8Wy8IAemcUbEoSDRkLTq9NghX",
+          "agendaUrl": "https://drive.google.com/file/d/1UpHjtNg0I5c7CVycXpXxvSc4bwmat6hJ/view?usp=drive_web"
+        },
+        {
+          "date": "2026-12-07",
+          "label": "Meeting at ABS",
+          "folderUrl": "https://drive.google.com/drive/folders/1L8dB1nuurHO7a-F8Z5xYuK164TnUlqIG",
+          "agendaUrl": ""
+        },
+        {
+          "date": "2027-01-04",
+          "label": "Meeting at Windsor School",
+          "folderUrl": "https://drive.google.com/drive/folders/1gcfUFMJmTz0eCUFOIiIFdUQJxM5GdNTd",
+          "agendaUrl": ""
+        }
+      ]
+    },
+    "weathersfield": {
+      "allUrl": "https://drive.google.com/drive/folders/1dK4fMBFj2hPc0cRXENDCkOYL8Dw9vENw",
+      "meetings": [
+        {
+          "date": "2026-11-10",
+          "label": "Meeting",
+          "folderUrl": "https://drive.google.com/drive/folders/1R1gOoLrtbVh89-iJi6waDlY4S2frAq8Y",
+          "agendaUrl": ""
+        },
+        {
+          "date": "2026-12-08",
+          "label": "Meeting",
+          "folderUrl": "https://drive.google.com/drive/folders/1jTw6yP7iAbS0jhzj0pnBACBS5VX67NWM",
+          "agendaUrl": ""
+        },
+        {
+          "date": "2027-01-12",
+          "label": "Meeting",
+          "folderUrl": "https://drive.google.com/drive/folders/1E-xecWfoQcxhyxwrB4C4WzBGACAHR-ma",
+          "agendaUrl": ""
+        },
+        {
+          "date": "2027-02-09",
+          "label": "Meeting",
+          "folderUrl": "https://drive.google.com/drive/folders/1W4XoeHob14N9qLIOT6zWHrJXsIKx29Zx",
+          "agendaUrl": ""
+        }
+      ]
+    }
+  }
+}

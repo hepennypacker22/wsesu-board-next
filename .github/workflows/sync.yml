@@ -1,0 +1,44 @@
+name: Sync board meetings
+
+on:
+  schedule:
+    # Every 30 minutes (UTC). GitHub may delay scheduled runs slightly.
+    - cron: "7,37 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Read the boards' Drive meeting folders
+        id: fetch
+        # A Drive hiccup leaves the last good data in place; the failure is re-raised after the commit.
+        continue-on-error: true
+        run: node scripts/fetch-meetings.mjs
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet data/ 2>/dev/null; then
+            git config user.name "wsesu-board-next-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add data/
+            git commit -m "Sync board meetings"
+            git push
+          else
+            echo "No changes."
+          fi
+      - name: Re-raise fetch failure
+        if: ${{ !cancelled() && steps.fetch.outcome == 'failure' }}
+        run: |
+          echo "::error::Reading a board folder failed - see the fetch step. The previous data/meetings.json is still being served."
+          exit 1
