@@ -54,14 +54,17 @@ const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 
 //   Place: Google Meet and Windsor School        (may wrap onto the next line inside parentheses)
 //   ... https://meet.google.com/abc-defg-hij
 // Returns the values as printed, or { error } saying why nothing is shown.
-export function agendaDetails(text, folderDate) {
-  // Some PDFs come out of pdftotext with capitals split off ("D ate: N ovember 3"). Only rejoin when the
-  // label itself shows it, so a real "Room A and ..." elsewhere is never touched.
-  const kerned = /D ate\s*:/.test(text);
-  const clean = (s) => (kerned ? s.replace(/\b([A-Z]) (?=[a-z])/g, '$1') : s).replace(/\s+/g, ' ').trim();
+export function agendaDetails(raw, folderDate) {
+  // pdftotext versions differ: some emit zero-width spaces or non-breaking spaces, which would end up
+  // in the shown text, so they go first.
+  const text = raw.replace(/[​-‍⁠﻿]/g, '').replace(/ /g, ' ');
+  // Some PDFs come out with capitals split off ("D ate: N ovember 3"). Only rejoin when the label itself
+  // shows it, so a real "Room A and ..." elsewhere is never touched.
+  const kerned = /D\s+ate\s*:/.test(text);
+  const clean = (s) => (kerned ? s.replace(/\b([A-Z]) +(?=[a-z])/g, '$1') : s).replace(/\s+/g, ' ').trim();
   const lines = text.split(/\r?\n/);
   const field = (label) => {
-    const re = new RegExp(`^\\s*${label.split('').join('\\s?')}\\s*:\\s*(.*)$`, 'i');
+    const re = new RegExp(`^\\s*${label.split('').join('\\s*')}\\s*:\\s*(.*)$`, 'i');
     const i = lines.findIndex((l) => re.test(l));
     return i < 0 ? null : { i, value: re.exec(lines[i])[1] };
   };
@@ -115,9 +118,12 @@ async function board(folderId) {
     const agenda = agendas.find((f) => /\.pdf$/i.test(f.name)) ?? agendas[0];
     const meeting = { date: m[1], label: meetingLabel(m[2]), folderUrl: e.url, agendaUrl: agenda ? agenda.url : '' };
     if (agenda && /\.pdf$/i.test(agenda.name)) {
-      const details = agendaDetails(await pdfText(agenda.id), m[1]);
-      if (details.error) console.log(`  ${m[1]}: no details shown (${details.error})`);
-      else meeting.details = details;
+      const text = await pdfText(agenda.id);
+      const details = agendaDetails(text, m[1]);
+      if (details.error) {
+        console.log(`  ${m[1]}: no details shown (${details.error}). Start of the agenda text:`);
+        console.log(JSON.stringify(text.slice(0, 600)));
+      } else meeting.details = details;
     }
     result.push(meeting);
   }

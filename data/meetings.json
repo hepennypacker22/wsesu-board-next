@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T18:59:12.580Z",
+  "updated": "2026-10-30T19:04:24.566Z",
   "boards": {
     "wsesu": {
       "allUrl": "https://drive.google.com/drive/folders/1dJq4eCztlJAaDPrj7cxAwZrdbaNZoEEn",
@@ -37,7 +37,12 @@
           "date": "2026-11-03",
           "label": "Meeting",
           "folderUrl": "https://drive.google.com/drive/folders/1i_lhZ9nU2Jn51kkLLeeu8e-uHTXinXQ4",
-          "agendaUrl": "https://drive.google.com/file/d/1kM_5hHEhIn6RzqNbaT1HUL-fWiEHwjAO/view?usp=drive_web"
+          "agendaUrl": "https://drive.google.com/file/d/1kM_5hHEhIn6RzqNbaT1HUL-fWiEHwjAO/view?usp=drive_web",
+          "details": {
+            "time": "6:00 pm",
+            "place": "Hartland Elementary School (97 Martinsville Rd, Hartland) and Google Meet",
+            "meetUrl": "https://meet.google.com/mvf-nrpr-xww"
+          }
         },
         {
           "date": "2026-12-01",
@@ -68,8 +73,8 @@
           "folderUrl": "https://drive.google.com/drive/folders/1WKcW7W5KeqwHTQWJNP-GMhGyt9p0hQyN",
           "agendaUrl": "https://drive.google.com/file/d/15lDaIAPJ_BwhtsPv707EI8-uuc6IsxqO/view?usp=drive_web",
           "details": {
-            "time": "​ 6:30 p.m.",
-            "place": "​ Google Meet and Windsor School",
+            "time": "6:30 p.m.",
+            "place": "Google Meet and Windsor School",
             "meetUrl": "https://meet.google.com/ajx-dqan-xxs"
           }
         },
