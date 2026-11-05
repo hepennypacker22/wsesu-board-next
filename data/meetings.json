@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T09:48:38.868Z",
+  "updated": "2026-11-05T12:13:39.905Z",
   "boards": {
     "wsesu": {
       "allUrl": "https://drive.google.com/drive/folders/1dJq4eCztlJAaDPrj7cxAwZrdbaNZoEEn",
@@ -33,17 +33,6 @@
     "hartland": {
       "allUrl": "https://drive.google.com/drive/folders/1fODyUf3poSDOD80mh6FbR-_TxpDsMKCJ",
       "meetings": [
-        {
-          "date": "2026-11-03",
-          "label": "Meeting",
-          "folderUrl": "https://drive.google.com/drive/folders/1i_lhZ9nU2Jn51kkLLeeu8e-uHTXinXQ4",
-          "agendaUrl": "https://drive.google.com/file/d/1kM_5hHEhIn6RzqNbaT1HUL-fWiEHwjAO/view?usp=drive_web",
-          "details": {
-            "time": "6:00 pm",
-            "place": "Hartland Elementary School (97 Martinsville Rd, Hartland) and Google Meet",
-            "meetUrl": "https://meet.google.com/mvf-nrpr-xww"
-          }
-        },
         {
           "date": "2026-12-01",
           "label": "Meeting",
